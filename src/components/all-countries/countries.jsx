@@ -15,7 +15,7 @@ export default function Countries() {
 
   return (
     <>
-      <h3>Total Countries: {countries.length} </h3>
+      <h3 className="total-count">Total Countries: {countries.length} </h3>
       <div id="all-countries-wrapper">
 
         <div className="all-countries-container">

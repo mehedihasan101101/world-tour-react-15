@@ -1,7 +1,11 @@
+.total-count{
+    margin-top: 20px;
+}
 #all-countries-wrapper {
     display: flex;
     justify-content: space-between;
     gap: 15px;
+    margin-top: 20px;
 }
 
 #visited-country-container {
