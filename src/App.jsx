@@ -7,7 +7,7 @@ function App() {
     {/* header */}
       <div className='header-container'>
         <h1 className='header-title'>All Countries of the World</h1>
-        <p className='header-des'>Explore a complete list of around 250 countries and territories, including both independent nations and regions with special status. A perfect way to discover the diversity of our world!F</p>
+        <p className='header-des'>Explore a complete list of around 250 countries and territories, including both independent nations and regions with special status. A perfect way to discover the diversity of our world!</p>
       </div>
       <Countries></Countries>
     </>
