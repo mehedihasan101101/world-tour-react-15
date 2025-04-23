@@ -50,5 +50,19 @@
 }
 
 .individual-container img {
- width: auto;
+    height: 200px;
+}
+
+@media (max-width:600px) {
+
+    .individual-container img {
+        height: auto;
+    }
+}
+
+@media (min-width:601px) and (max-width:1050px) {
+
+    .individual-container img {
+        height: 160px;
+    }
 }
