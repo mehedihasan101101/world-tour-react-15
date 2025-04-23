@@ -15,17 +15,7 @@
     padding: 20px 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-    .individual-container {
-        background-color: #2c2c2e;
-        border: 1px solid #3a3a3c;
 
-    }
-
-    .individual-container p {
-        color: rgba(255, 255, 255, 0.87) !important;
-    }
-}
 
 .individual-container p {
     text-align: left;
@@ -52,7 +42,20 @@
 .individual-container img {
     height: 200px;
 }
+@media (prefers-color-scheme: dark) {
+    .individual-container {
+        background-color: #2c2c2e;
+        border: 1px solid #3a3a3c;
 
+    }
+
+    .individual-container p {
+        color: rgba(255, 255, 255, 0.87) !important;
+    }
+    .btn-visited {
+       color: rgba(255, 255, 255, 0.87) !important;
+    }
+}
 @media (max-width:600px) {
 
     .individual-container img {
