@@ -1,8 +1,16 @@
+
+import { useState } from 'react';
 import './country.css'
 
-export default function Country({ country }) {
-    console.log(country)
-    const { name, flags, capital, area, continents } = country;
+export default function Country({country,getVisitedList}) {
+    const { name, flags, capital, area, continents, languages, population } = country;
+    
+    const [isVisited,setVisited] = useState(false);
+    
+    function visitStateControl(){
+          setVisited(!isVisited);
+          getVisitedList(country);
+    } 
     return (
 
         <>
@@ -12,9 +20,13 @@ export default function Country({ country }) {
                 <p>Capital: {capital} </p>
                 <p>Area: {area} km²</p>
                 <p>Continent: {continents} </p>
+                <p>Language: {languages ? Object.values(languages)[0] : "N/A"} </p>
+                <p>Population: {population} </p>
+                
                 <hr></hr>
+
                 <div>
-                    <button className='btn-visited'>Visited</button>
+                <button onClick={visitStateControl} disabled={isVisited} className='btn-visited'>Visited</button>
                 </div>
             </div>
 
