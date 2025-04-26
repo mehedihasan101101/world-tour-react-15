@@ -18,6 +18,10 @@
         border: 1px solid #3a3a3c;
         background-color: #2c2c2e;
     }
+    .btn-delete svg{
+        color: rgba(255, 255, 255, 0.87) !important;
+    }
+    
 }
 
 .container-liked-country {
@@ -62,6 +66,9 @@
 
 .btn-delete:focus {
     outline: none;
+}
+.btn-delete svg{
+    color: #213547;
 }
 
 @media (max-width:600px) {
