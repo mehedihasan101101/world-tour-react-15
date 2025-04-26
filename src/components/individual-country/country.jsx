@@ -1,14 +1,14 @@
 
-import { useState } from 'react';
+
 import './country.css'
 
-export default function Country({country,getVisitedList}) {
+export default function Country({country,getVisitedList,isVisited}) {
     const { name, flags, capital, area, continents, languages, population } = country;
     
-    const [isVisited,setVisited] = useState(false);
+    
     
     function visitStateControl(){
-          setVisited(!isVisited);
+ 
           getVisitedList(country);
     } 
     return (
@@ -26,7 +26,7 @@ export default function Country({country,getVisitedList}) {
                 <hr></hr>
 
                 <div>
-                <button onClick={visitStateControl} disabled={isVisited} className='btn-visited'>Visited</button>
+                <button onClick={visitStateControl}  disabled={isVisited} className='btn-visited'>Visited</button>
                 </div>
             </div>
 

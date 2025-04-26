@@ -12,37 +12,64 @@
         0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
         0 3.5px 6px hsla(0, 0%, 0%, 0.09);
 }
-@media (prefers-color-scheme: dark){
+
+@media (prefers-color-scheme: dark) {
     #visited-country-container {
         border: 1px solid #3a3a3c;
         background-color: #2c2c2e;
     }
 }
 
-.container-liked-country{
+.container-liked-country {
     display: grid;
     grid-template-columns: repeat(1, minmax(0px, 1fr));
     width: full;
     padding: 5px;
 
 }
-.single-liked-country img{
- width:100%;
+
+.single-liked-country img {
+    width: 100%;
+    margin-top: 5px;
 }
-.single-liked-country p{
- 
-}
+
 .single-liked-country {
     padding: 5px;
     margin-top: 10px;
     border: 1px solid rgb(168, 162, 162);
 }
 
-@media (max-width:600px){
-    .single-liked-country p{
+.btn-delete {
+    padding: 0;
+    width: 20px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(192, 186, 186);
+}
+
+.btn-delete:hover {
+    border: 1px solid #213547;
+
+}
+
+.btn-container {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+}
+
+.btn-delete:focus {
+    outline: none;
+}
+
+@media (max-width:600px) {
+    .single-liked-country p {
         font-size: 14px;
     }
-    #visited-country-container h3{
+
+    #visited-country-container h3 {
         font-size: 14px;
 
     }

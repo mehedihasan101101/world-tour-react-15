@@ -6,6 +6,8 @@ import VisitedList from "../visited-countries/visited-country";
 
 
 export default function Countries() {
+
+
   const [countries, setCountries] = useState([]);
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/all')
@@ -16,9 +18,19 @@ export default function Countries() {
 
   const [visitedCountryData, setVisitedData] = useState([])
   let visitedCountryList = (countryDetail) => {
-    const listOfVisitedCountry = [...visitedCountryData,countryDetail];
+    const listOfVisitedCountry = [...visitedCountryData, countryDetail];
     setVisitedData(listOfVisitedCountry);
   }
+
+  function deleteOperation(targetCountry) {
+    const filteredVisitedList = visitedCountryData.filter(n => {
+      return n.name.common !== targetCountry;
+
+    })
+    setVisitedData(filteredVisitedList);
+
+  }
+
 
 
   return (
@@ -27,9 +39,14 @@ export default function Countries() {
       <div id="all-countries-wrapper">
 
         <div className="all-countries-container">
-          {countries.map(singular => <Country country={singular} getVisitedList={visitedCountryList} key={singular.name.common}>  </Country>)}
+          {countries.map(singular => {
+            const isVisited = visitedCountryData.some(x =>singular.name.common == x.name.common);
+            return (
+              <Country isVisited ={isVisited} country={singular} getVisitedList={visitedCountryList} key={singular.name.common}>  </Country>
+            )
+          } )}
         </div>
-        <VisitedList totalVisitedCountry={visitedCountryData}></VisitedList>
+        <VisitedList deleteBtnEventHandler={deleteOperation} totalVisitedCountry={visitedCountryData}></VisitedList>
       </div>
 
     </>
