@@ -1,12 +1,32 @@
-# React + Vite
+# World Tour
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**World Tour** is a React-based web application that provides a comprehensive list of countries and territories worldwide. The project is built using modern tools like **React** and **Vite**, ensuring a fast and efficient development experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Live Link**
 
-## Expanding the ESLint configuration
+[World Tour Live](https://mehedihasan101101.github.io/world-tour-react-15/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## **Features**
+
+- **All Countries List**: Displays a complete list of around 250 countries and territories.
+- **Mark as Visited**: Users can mark a country as visited. Once marked, the button becomes disabled, and the status updates dynamically.
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices.
+- **Interactive UI**: Built with React components for a seamless user experience.
+- **Fast Loading**: Powered by Vite for optimized build and development performance.
+
+---
+
+## **Technologies Used**
+
+### **Frontend**
+- **React**: For building the user interface.
+- **Vite**: For fast development and optimized builds.
+- **CSS**: For styling the application.
+
+### **Tools**
+- **ESLint**: For maintaining code quality.
+- **gh-pages**: For deploying the project to GitHub Pages.
